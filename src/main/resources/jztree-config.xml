@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jztree-config>
+    <tree-config>
+        <tree name="demo-tree" class="org.terramagnet.jztree.demo.DemoTree"/>
+    </tree-config>
+</jztree-config>

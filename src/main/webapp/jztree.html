@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>JztreeDemo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen"/>
+        <link href="jztree/css/zTreeStyle.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="jztree/js/jquery.js"></script>
+        <script type="text/javascript" src="jztree/js/jquery.ztree.core-3.x.min.js"></script>
+        <script type="text/javascript" src="jztree/js/jquery.jztree.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("ul.ztree").jztree({treeName:"demo-tree",anchorUrl:"sublist.jsp?node=attr{id}"});
+            });
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <a class="brand" href="#">Jztree Demo</a>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3">
+                    <ul class="nav nav-list">
+                        <li><a href="index.html">弹出树形选择器</a></li>
+                        <li class="active"><a href="javascript:;">绑定树+子页面</a></li>
+                        <li><a href="popup.html">绑定树（右键菜单）</a></li>
+                    </ul>
+                </div>
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <ul class="ztree"></ul>
+                        </div>
+                        <div class="span9">
+                            <iframe style="display:block;width:100%;height:30em;" name="subframe"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

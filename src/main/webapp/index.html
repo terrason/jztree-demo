@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>JztreeDemo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
+        <script type="text/javascript" src="jztree/js/jquery.js"></script>
+        <script type="text/javascript" src="jztree/js/ztree4j.js"></script>
+        <script type="text/javascript">
+            function select(){
+                var rtnVal=Jztree.select({treeName: 'demo-tree'});
+                if(rtnVal){
+                    $("#ids").val(rtnVal.ids);
+                    $("#names").val(rtnVal.names);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <a class="brand" href="#">Jztree Demo</a>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3">
+                    <ul class="nav nav-list">
+                        <li class="active"><a href="javascript:;">弹出树形选择器</a></li>
+                        <li><a href="jztree.html">绑定树+子页面</a></li>
+                        <li><a href="popup.html">绑定树（右键菜单）</a></li>
+                    </ul>
+                </div>
+                <div class="span9">
+                    <form class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label" for="ids">选择的节点ID：</label>
+                            <div class="controls">
+                                <div class="input-append">
+                                    <input id="ids" type="text" placeholder="从树形选择器中选择" readonly>
+                                    <button class="btn btn-info" type="button" onclick="select();">选择</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="names">选择的节点名称：</label>
+                            <div class="controls">
+                                <textarea  id="names" readonly></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
